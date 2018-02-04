@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoListItem from './video_list_item';
+import styled from 'styled-components';
 
 const VideoList = (props) => {
     const videoItems = props.videos.map((video) => {

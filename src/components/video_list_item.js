@@ -7,16 +7,21 @@ const VideoListItem = ({video, onVideoSelect}) => {
     const videoTitle = video.snippet.title;
 
     const Title = styled.div`
-        color: #4a4a4a;
-        font-size: 1.5em;
+        color: #4a4;
+        font-size: .95em;
         font-family: Helvetica, sans-serif;
+        font-weight: bold;
     `;
-    
+
+    const Image = styled.img`
+        max-width: 100px;
+    `;
+
     return (
         <li onClick={() => onVideoSelect(video)} className="list-group-item">
             <div className="video-list media">
                 <div className="media-left">
-                    <img className="media-object" src={videoURL} alt="video thumbnail"/>
+                    <Image src={videoURL} alt="video thumbnail"/>
                 </div>
                 <div className="media-body">
                     <Title>{videoTitle}</Title>
