@@ -1,14 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const VideoListItem = ({video, onVideoSelect}) => {
-    console.log(video);
 
     const videoURL = video.snippet.thumbnails.default.url;
     const videoTitle = video.snippet.title;
 
-    const mainImage = styled.img`
-        border: 2px solid black;
-    `
+    const Title = styled.div`
+        color: #4a4a4a;
+        font-size: 1.5em;
+        font-family: Helvetica, sans-serif;
+    `;
+    
     return (
         <li onClick={() => onVideoSelect(video)} className="list-group-item">
             <div className="video-list media">
@@ -16,7 +19,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
                     <img className="media-object" src={videoURL} alt="video thumbnail"/>
                 </div>
                 <div className="media-body">
-                    <div className="media-heading">{videoTitle}</div>
+                    <Title>{videoTitle}</Title>
                 </div>
             </div>
         </li>
