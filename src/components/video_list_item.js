@@ -17,8 +17,21 @@ const VideoListItem = ({video, onVideoSelect}) => {
         max-width: 100px;
     `;
 
+    const ListItem = styled.li`
+        cursor: pointer;
+        padding: 12px;
+        margin-top: 10px;
+        background-color: #f5f5f5;
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        list-style-type: none;
+        &:hover {
+            background-color: #cccccc;
+        }
+    `;
+
     return (
-        <li onClick={() => onVideoSelect(video)} className="list-group-item">
+        <ListItem onClick={() => onVideoSelect(video)}>
             <div className="video-list media">
                 <div className="media-left">
                     <Image src={videoURL} alt="video thumbnail"/>
@@ -27,7 +40,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
                     <Title>{videoTitle}</Title>
                 </div>
             </div>
-        </li>
+        </ListItem>
     )
 };
 

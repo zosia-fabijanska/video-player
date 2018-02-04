@@ -17,7 +17,7 @@ class SearchBar extends Component {
         `;
 
         const Input = styled.input`
-            min-width: 85%;
+            min-width: 75%;
             border-radius: 3px;
         `;
         return(
